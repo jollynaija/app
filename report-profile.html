@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report a Profile | ConnectNaija</title>
+  <meta name="description" content="Report an inappropriate or suspicious profile on ConnectNaija.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#6B2D3C">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="ConnectNaija Home">
+        <div class="logo-mark">C</div>
+        <span class="logo-text">Connect<span>Naija</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="browse.html" class="nav-link">Browse</a>
+        <a href="list-profile.html" class="nav-link">List Profile</a>
+        <a href="safety.html" class="nav-link">Safety</a>
+        <a href="favorites.html" class="nav-link">Favorites</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="btn btn-ghost btn-sm">Log In</a>
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" role="dialog">
+    <div class="mobile-nav-panel">
+      <div class="mobile-nav-header">
+        <span class="logo-text">Connect<span>Naija</span></span>
+        <button class="mobile-nav-close btn-icon" aria-label="Close menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="safety.html">Safety Guidelines</a>
+        <a href="report-profile.html">Report a Profile</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="list-profile-page">
+    <div class="container">
+      <div class="list-profile-card">
+        <h1>Report a Profile</h1>
+        <p class="subtitle">Help us keep the community safe. Reports are reviewed by our moderation team. This form is simulated.</p>
+
+        <form id="report-form">
+          <div class="form-group">
+            <label class="form-label" for="report-profile-id">Profile ID or Display Name</label>
+            <input type="text" class="form-input" id="report-profile-id" placeholder="e.g. adaeze-001 or Adaeze">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="report-reason">Reason <span class="required">*</span></label>
+            <select class="form-select" id="report-reason" required>
+              <option value="">Select a reason</option>
+              <option value="underage">Suspected underage</option>
+              <option value="scam">Scam or fraud</option>
+              <option value="harassment">Harassment or abuse</option>
+              <option value="fake">Fake or impersonation</option>
+              <option value="inappropriate">Inappropriate content</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="report-details">Additional details</label>
+            <textarea class="form-textarea" id="report-details" placeholder="Please provide any relevant information..."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="report-email">Your email (optional, for follow-up)</label>
+            <input type="email" class="form-input" id="report-email" placeholder="you@example.com">
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%">Submit Report</button>
+        </form>
+
+        <div id="report-confirm" style="display:none;text-align:center;padding:var(--space-6) 0">
+          <div style="width:64px;height:64px;background:var(--color-success-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-5)">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <h2 class="heading-3" style="margin-bottom:var(--space-3)">Report Received</h2>
+          <p class="text-secondary" style="margin-bottom:var(--space-6)">Thank you. Your report has been recorded (simulated). Our team would review it in production.</p>
+          <a href="browse.html" class="btn btn-primary">Back to Browse</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding-top:0">
+        <span>&copy; 2026 ConnectNaija. For adults 18+ only.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

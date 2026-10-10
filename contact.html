@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Support | ConnectNaija</title>
+  <meta name="description" content="Contact ConnectNaija support for help with your account, listing, or safety concerns.">
+  <link rel="canonical" href="https://connectnaija.example/contact.html">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#6B2D3C">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="ConnectNaija Home">
+        <div class="logo-mark">C</div>
+        <span class="logo-text">Connect<span>Naija</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="browse.html" class="nav-link">Browse</a>
+        <a href="list-profile.html" class="nav-link">List Profile</a>
+        <a href="safety.html" class="nav-link">Safety</a>
+        <a href="favorites.html" class="nav-link">Favorites</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="btn btn-ghost btn-sm">Log In</a>
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" role="dialog">
+    <div class="mobile-nav-panel">
+      <div class="mobile-nav-header">
+        <span class="logo-text">Connect<span>Naija</span></span>
+        <button class="mobile-nav-close btn-icon" aria-label="Close menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="safety.html">Safety Guidelines</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="list-profile-page">
+    <div class="container">
+      <div class="list-profile-card">
+        <h1>Contact &amp; Support</h1>
+        <p class="subtitle">Have a question or need help? Send us a message. This form is simulated in the prototype.</p>
+
+        <form id="contact-form" onsubmit="event.preventDefault(); if(window.showToast) showToast('Message sent (simulated). We will respond in production.'); this.reset();">
+          <div class="form-group">
+            <label class="form-label" for="contact-name">Name</label>
+            <input type="text" class="form-input" id="contact-name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-email">Email</label>
+            <input type="email" class="form-input" id="contact-email" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-subject">Subject</label>
+            <select class="form-select" id="contact-subject" required>
+              <option value="">Select topic</option>
+              <option value="account">Account help</option>
+              <option value="listing">Listing or profile</option>
+              <option value="verification">Verification</option>
+              <option value="safety">Safety concern</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-message">Message</label>
+            <textarea class="form-textarea" id="contact-message" required placeholder="How can we help?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding-top:0">
+        <span>&copy; 2026 ConnectNaija. For adults 18+ only.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Verification | ConnectNaija</title>
+  <meta name="description" content="Verify your ConnectNaija profile. Simulated identity verification process for adults 18+.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#6B2D3C">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="ConnectNaija Home">
+        <div class="logo-mark">C</div>
+        <span class="logo-text">Connect<span>Naija</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="browse.html" class="nav-link">Browse</a>
+        <a href="list-profile.html" class="nav-link">List Profile</a>
+        <a href="safety.html" class="nav-link">Safety</a>
+        <a href="favorites.html" class="nav-link">Favorites</a>
+      </nav>
+      <div class="header-actions">
+        <a href="dashboard.html" class="btn btn-ghost btn-sm">Dashboard</a>
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" role="dialog">
+    <div class="mobile-nav-panel">
+      <div class="mobile-nav-header">
+        <span class="logo-text">Connect<span>Naija</span></span>
+        <button class="mobile-nav-close btn-icon" aria-label="Close menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="browse.html">Browse Profiles</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="verification.html">Verification</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="list-profile-page">
+    <div class="container">
+      <div class="list-profile-card">
+        <h1>Profile Verification</h1>
+        <p class="subtitle">Build trust with a verified badge. This process is fully simulated — no documents or biometrics are uploaded or stored.</p>
+
+        <h2 class="heading-4" style="margin-bottom:var(--space-3)">Why verify?</h2>
+        <p class="text-secondary" style="margin-bottom:var(--space-6)">Verified members display a badge on their profile. Verification helps other adults feel more confident when connecting.</p>
+
+        <h2 class="heading-4" style="margin-bottom:var(--space-3)">Requirements</h2>
+        <ul style="list-style:disc;padding-left:var(--space-6);margin-bottom:var(--space-6);color:var(--color-text-secondary);font-size:var(--text-sm);line-height:1.8">
+          <li>A valid government-issued photo ID (National ID, International Passport, or Driver's Licence)</li>
+          <li>A clear selfie or liveness check matching the ID</li>
+          <li>You must be 18 years or older</li>
+        </ul>
+
+        <div style="background:var(--color-warning-bg);border-radius:var(--radius-lg);padding:var(--space-4);margin-bottom:var(--space-6);font-size:var(--text-sm);color:var(--color-warning)">
+          <strong>Privacy notice:</strong> In production, identity documents would be processed securely and deleted after review. This prototype does not transmit, store, or process any real identity data.
+        </div>
+
+        <h2 class="heading-4" style="margin-bottom:var(--space-4)">Submit for Verification (Simulated)</h2>
+        
+        <div class="form-group">
+          <label class="form-label">Identity Document</label>
+          <button type="button" class="btn btn-secondary" id="sim-id-upload" style="width:100%">Upload ID Document (Simulated)</button>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">Selfie / Liveness Check</label>
+          <button type="button" class="btn btn-secondary" id="sim-selfie-upload" style="width:100%">Capture Selfie (Simulated)</button>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" id="verify-consent">
+          <label for="verify-consent">I consent to the simulated verification process and understand no real documents are processed in this prototype.</label>
+        </div>
+
+        <button type="button" class="btn btn-primary" id="sim-verify-submit" style="width:100%;margin-top:var(--space-4)">Submit for Review</button>
+
+        <div id="verification-status" class="verification-states" style="margin-top:var(--space-6)"></div>
+
+        <div style="margin-top:var(--space-8)">
+          <h2 class="heading-4" style="margin-bottom:var(--space-4)">Status Examples</h2>
+          <div class="verification-states">
+            <div class="state-card pending">
+              <div>
+                <strong>Pending</strong>
+                <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:4px">Your submission is under review. This typically takes 1–3 business days.</p>
+              </div>
+            </div>
+            <div class="state-card approved">
+              <div>
+                <strong>Approved</strong>
+                <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:4px">Your profile now displays a verified badge.</p>
+              </div>
+            </div>
+            <div class="state-card rejected">
+              <div>
+                <strong>Needs Attention</strong>
+                <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:4px">We could not complete verification. Please resubmit with clearer documents.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding-top:0">
+        <span>&copy; 2026 ConnectNaija. For adults 18+ only.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

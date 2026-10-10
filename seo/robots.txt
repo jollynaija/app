@@ -1,0 +1,26 @@
+# ConnectNaija robots.txt template
+# Place at the site root in production: https://connectnaija.example/robots.txt
+
+User-agent: *
+Allow: /
+Allow: /browse.html
+Allow: /list-profile.html
+Allow: /safety.html
+Allow: /privacy.html
+Allow: /terms.html
+Allow: /age-policy.html
+Allow: /contact.html
+
+# Disallow private / authenticated areas
+Disallow: /dashboard.html
+Disallow: /favorites.html
+Disallow: /login.html
+Disallow: /register.html
+Disallow: /verification.html
+Disallow: /report-profile.html
+
+# Disallow arbitrary filter/search combinations if they create thin pages
+# (In production, use canonical tags and avoid indexing all query permutations)
+
+# Sitemap
+Sitemap: https://connectnaija.example/sitemap.xml

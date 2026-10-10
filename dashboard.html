@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | ConnectNaija</title>
+  <meta name="description" content="Manage your ConnectNaija profile and listing.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#6B2D3C">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="ConnectNaija Home">
+        <div class="logo-mark">C</div>
+        <span class="logo-text">Connect<span>Naija</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="browse.html" class="nav-link">Browse</a>
+        <a href="list-profile.html" class="nav-link">List Profile</a>
+        <a href="safety.html" class="nav-link">Safety</a>
+        <a href="favorites.html" class="nav-link">Favorites</a>
+      </nav>
+      <div class="header-actions">
+        <a href="dashboard.html" class="btn btn-ghost btn-sm">Dashboard</a>
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" role="dialog">
+    <div class="mobile-nav-panel">
+      <div class="mobile-nav-header">
+        <span class="logo-text">Connect<span>Naija</span></span>
+        <button class="mobile-nav-close btn-icon" aria-label="Close menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="browse.html">Browse Profiles</a>
+        <a href="list-profile.html">List Your Profile</a>
+        <a href="favorites.html">Favorites</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="verification.html">Verification</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="dashboard-page">
+    <div class="container">
+      <h1 class="heading-2" style="margin-bottom:var(--space-6)">Member Dashboard</h1>
+      
+      <div class="dashboard-layout">
+        <nav class="dashboard-nav" aria-label="Dashboard navigation">
+          <a href="#overview" class="active">Overview</a>
+          <a href="list-profile.html">Edit Profile</a>
+          <a href="verification.html">Verification</a>
+          <a href="#contact">Contact Settings</a>
+          <a href="#account">Account</a>
+        </nav>
+
+        <div class="dashboard-content">
+          <h2 class="heading-4" style="margin-bottom:var(--space-5)">Overview</h2>
+          
+          <div class="stat-cards">
+            <div class="stat-card">
+              <div class="stat-value">75%</div>
+              <div class="stat-label">Profile Completion</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" id="listing-status"><span class="status-dot active"></span> Active</div>
+              <div class="stat-label">Listing Status</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value"><span class="status-dot pending"></span> Pending</div>
+              <div class="stat-label">Verification</div>
+            </div>
+          </div>
+
+          <div style="margin-bottom:var(--space-6)">
+            <h3 class="heading-4" style="margin-bottom:var(--space-3)">Your Listing</h3>
+            <p class="text-secondary" style="font-size:var(--text-sm);margin-bottom:var(--space-4)">
+              Manage visibility and status of your public profile. Changes in this prototype are simulated only.
+            </p>
+            <div style="display:flex;gap:var(--space-3);flex-wrap:wrap">
+              <a href="list-profile.html" class="btn btn-secondary btn-sm">Edit Profile</a>
+              <a href="profile.html?id=adaeze-001" class="btn btn-ghost btn-sm">Preview</a>
+              <button class="btn btn-ghost btn-sm" id="pause-listing">Pause Listing</button>
+              <button class="btn btn-ghost btn-sm" id="remove-listing" style="color:var(--color-error)">Remove Listing</button>
+            </div>
+          </div>
+
+          <div style="margin-bottom:var(--space-6)">
+            <h3 class="heading-4" style="margin-bottom:var(--space-3)">Contact Visibility</h3>
+            <div class="form-check">
+              <input type="checkbox" id="dash-whatsapp" checked>
+              <label for="dash-whatsapp">WhatsApp contact enabled</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="dash-phone">
+              <label for="dash-phone">Phone number visible publicly</label>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="heading-4" style="margin-bottom:var(--space-3)">Verification</h3>
+            <p class="text-secondary" style="font-size:var(--text-sm);margin-bottom:var(--space-3)">
+              Complete verification to display a verified badge on your profile.
+            </p>
+            <a href="verification.html" class="btn btn-primary btn-sm">Start Verification</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding-top:0">
+        <span>&copy; 2026 ConnectNaija. For adults 18+ only.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

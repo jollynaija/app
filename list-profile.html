@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List Your Profile | ConnectNaija</title>
+  <meta name="description" content="Create your adult profile listing on ConnectNaija. Share your interests, location, and contact preferences. For adults 18+ in Nigeria.">
+  <link rel="canonical" href="https://connectnaija.example/list-profile.html">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#6B2D3C">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="ConnectNaija Home">
+        <div class="logo-mark">C</div>
+        <span class="logo-text">Connect<span>Naija</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="browse.html" class="nav-link">Browse</a>
+        <a href="list-profile.html" class="nav-link active">List Profile</a>
+        <a href="safety.html" class="nav-link">Safety</a>
+        <a href="favorites.html" class="nav-link">Favorites</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="btn btn-ghost btn-sm">Log In</a>
+        <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" role="dialog" aria-label="Mobile menu">
+    <div class="mobile-nav-panel">
+      <div class="mobile-nav-header">
+        <span class="logo-text">Connect<span>Naija</span></span>
+        <button class="mobile-nav-close btn-icon" aria-label="Close menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="browse.html">Browse Profiles</a>
+        <a href="list-profile.html">List Your Profile</a>
+        <a href="favorites.html">Favorites</a>
+        <a href="safety.html">Safety Guidelines</a>
+      </nav>
+      <div class="mobile-nav-actions">
+        <a href="login.html" class="btn btn-secondary" style="width:100%">Log In</a>
+        <a href="register.html" class="btn btn-primary" style="width:100%">Sign Up</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="list-profile-page">
+    <div class="container">
+      <div class="list-profile-card">
+        <h1>List Your Profile</h1>
+        <p class="subtitle">Create a listing to connect with adults who share your interests. All fields marked * are required.</p>
+
+        <!-- Progress -->
+        <div class="form-progress" aria-label="Form progress">
+          <div class="form-progress-step active">
+            <div class="form-progress-dot">1</div>
+            <span class="form-progress-label">Basic</span>
+          </div>
+          <div class="form-progress-step">
+            <div class="form-progress-dot">2</div>
+            <span class="form-progress-label">Eligibility</span>
+          </div>
+          <div class="form-progress-step">
+            <div class="form-progress-dot">3</div>
+            <span class="form-progress-label">Location</span>
+          </div>
+          <div class="form-progress-step">
+            <div class="form-progress-dot">4</div>
+            <span class="form-progress-label">About</span>
+          </div>
+          <div class="form-progress-step">
+            <div class="form-progress-dot">5</div>
+            <span class="form-progress-label">Interests</span>
+          </div>
+          <div class="form-progress-step">
+            <div class="form-progress-dot">6</div>
+            <span class="form-progress-label">Photos</span>
+          </div>
+          <div class="form-progress-step">
+            <div class="form-progress-dot">7</div>
+            <span class="form-progress-label">Contact</span>
+          </div>
+          <div class="form-progress-step">
+            <div class="form-progress-dot">8</div>
+            <span class="form-progress-label">Review</span>
+          </div>
+        </div>
+
+        <form id="list-profile-form" novalidate>
+          <!-- Step 1: Basic -->
+          <div class="form-step active" data-step="0">
+            <h2 class="heading-4" style="margin-bottom:var(--space-5)">Basic Information</h2>
+            <div class="form-group">
+              <label class="form-label" for="display-name">Display Name / Alias <span class="required">*</span></label>
+              <input type="text" class="form-input" id="display-name" name="displayName" required maxlength="40" placeholder="e.g. Adaeze">
+              <p class="form-hint">This is how you will appear to others. You may use an alias.</p>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="profile-age">Age <span class="required">*</span></label>
+              <input type="number" class="form-input" id="profile-age" name="age" required min="18" max="70" placeholder="18">
+            </div>
+            <div class="form-actions">
+              <span></span>
+              <button type="button" class="btn btn-primary" data-next>Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Eligibility -->
+          <div class="form-step" data-step="1">
+            <h2 class="heading-4" style="margin-bottom:var(--space-5)">Adult Eligibility</h2>
+            <p class="text-secondary" style="margin-bottom:var(--space-5)">ConnectNaija is exclusively for adults aged 18 and above. Please confirm your eligibility.</p>
+            <div class="form-check">
+              <input type="checkbox" id="confirm-18" name="confirm18" required>
+              <label for="confirm-18">I confirm that I am 18 years of age or older and that all information I provide is accurate.</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="confirm-consent" name="confirmConsent" required>
+              <label for="confirm-consent">I understand this platform is for consensual adult relationships and I will respect the boundaries of other members.</label>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost" data-prev>Back</button>
+              <button type="button" class="btn btn-primary" data-next>Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 3: Location -->
+          <div class="form-step" data-step="2">
+            <h2 class="heading-4" style="margin-bottom:var(--space-5)">Your Location in Nigeria</h2>
+            <div class="form-group">
+              <label class="form-label" for="profile-state">State <span class="required">*</span></label>
+              <select class="form-select" id="profile-state" name="state" required>
+                <option value="">Select State</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="profile-city">City <span class="required">*</span></label>
+              <select class="form-select" id="profile-city" name="city" required>
+                <option value="">Select City</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost" data-prev>Back</button>
+              <button type="button" class="btn btn-primary" data-next>Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 4: Biography -->
+          <div class="form-step" data-step="3">
+            <h2 class="heading-4" style="margin-bottom:var(--space-5)">About You</h2>
+            <div class="form-group">
+              <label class="form-label" for="profile-bio">Biography <span class="required">*</span></label>
+              <textarea class="form-textarea" id="profile-bio" name="bio" required maxlength="600" placeholder="Tell potential connections about yourself, your interests, and what you are looking for..."></textarea>
+              <p class="form-hint">Maximum 600 characters. Be genuine and respectful.</p>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="profile-languages">Languages</label>
+              <input type="text" class="form-input" id="profile-languages" name="languages" placeholder="e.g. English, Yoruba, Igbo">
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost" data-prev>Back</button>
+              <button type="button" class="btn btn-primary" data-next>Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 5: Interests -->
+          <div class="form-step" data-step="4">
+            <h2 class="heading-4" style="margin-bottom:var(--space-5)">Relationship Interests</h2>
+            <p class="text-secondary" style="margin-bottom:var(--space-4)">Select one or more that describe what you are open to.</p>
+            <div id="profile-interests">
+              <!-- Populated by JS -->
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost" data-prev>Back</button>
+              <button type="button" class="btn btn-primary" data-next>Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 6: Photos -->
+          <div class="form-step" data-step="5">
+            <h2 class="heading-4" style="margin-bottom:var(--space-5)">Profile Photos</h2>
+            <p class="text-secondary" style="margin-bottom:var(--space-4)">Upload clear portrait photos. Maximum 5 images. Photos are reviewed before publishing.</p>
+            <input type="file" id="profile-photos" accept="image/*" multiple style="display:none">
+            <div class="photo-upload-grid" id="photo-preview-grid">
+              <div class="photo-upload-slot" onclick="document.getElementById('profile-photos').click()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
+                <span style="font-size:var(--text-xs);color:var(--color-text-muted)">Add photo</span>
+              </div>
+              <div class="photo-upload-slot" onclick="document.getElementById('profile-photos').click()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
+                <span style="font-size:var(--text-xs);color:var(--color-text-muted)">Add photo</span>
+              </div>
+              <div class="photo-upload-slot" onclick="document.getElementById('profile-photos').click()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
+                <span style="font-size:var(--text-xs);color:var(--color-text-muted)">Add photo</span>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost" data-prev>Back</button>
+              <button type="button" class="btn btn-primary" data-next>Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 7: Contact & Privacy -->
+          <div class="form-step" data-step="6">
+            <h2 class="heading-4" style="margin-bottom:var(--space-5)">Contact Preferences</h2>
+            <div class="form-group">
+              <label class="form-label" for="profile-phone">Phone Number (optional)</label>
+              <input type="tel" class="form-input" id="profile-phone" name="phone" data-phone placeholder="+234">
+              <p class="form-hint">Nigerian numbers. Format: +234 followed by your number.</p>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="enable-whatsapp" name="whatsapp" checked>
+              <label for="enable-whatsapp">Allow WhatsApp contact (recommended)</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="show-phone" name="showPhone">
+              <label for="show-phone">Show phone number publicly on my profile</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="enable-contact" name="enableContact" checked>
+              <label for="enable-contact">Enable contact requests on my profile</label>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost" data-prev>Back</button>
+              <button type="button" class="btn btn-primary" data-next>Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 8: Review & Submit -->
+          <div class="form-step" data-step="7">
+            <h2 class="heading-4" style="margin-bottom:var(--space-5)">Review &amp; Submit</h2>
+            <p class="text-secondary" style="margin-bottom:var(--space-5)">
+              Your profile will be reviewed by our moderation team before it appears publicly. 
+              This process is simulated in this prototype — no data is sent to a server.
+            </p>
+            <div class="form-check">
+              <input type="checkbox" id="agree-terms" name="agreeTerms" required>
+              <label for="agree-terms">I agree to the <a href="terms.html" target="_blank">Terms of Service</a> and <a href="privacy.html" target="_blank">Privacy Policy</a>.</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="agree-safety" name="agreeSafety" required>
+              <label for="agree-safety">I have read the <a href="safety.html" target="_blank">Safety Guidelines</a> and will follow them.</label>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost" data-prev>Back</button>
+              <button type="submit" class="btn btn-primary">Submit for Review</button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Confirmation (hidden initially) -->
+        <div id="submission-confirm" style="display:none;text-align:center;padding:var(--space-8) 0">
+          <div style="width:64px;height:64px;background:var(--color-success-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-5)">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <h2 class="heading-3" style="margin-bottom:var(--space-3)">Profile Submitted</h2>
+          <p class="text-secondary" style="margin-bottom:var(--space-6)">
+            Your listing has been submitted for review (simulated). In production, you would receive a confirmation email and be able to track status in your dashboard.
+          </p>
+          <div style="display:flex;gap:var(--space-3);justify-content:center;flex-wrap:wrap">
+            <a href="dashboard.html" class="btn btn-primary">Go to Dashboard</a>
+            <a href="verification.html" class="btn btn-secondary">Start Verification</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding-top:0">
+        <span>&copy; 2026 ConnectNaija. For adults 18+ only.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/mock-data.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

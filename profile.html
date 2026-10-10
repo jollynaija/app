@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | ConnectNaija</title>
+  <meta name="description" content="View adult profile details on ConnectNaija. For consenting adults 18+ in Nigeria.">
+  <meta name="robots" content="noindex"> <!-- Individual profiles: index only when approved in production -->
+  <meta name="theme-color" content="#6B2D3C">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="ConnectNaija Home">
+        <div class="logo-mark">C</div>
+        <span class="logo-text">Connect<span>Naija</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="browse.html" class="nav-link">Browse</a>
+        <a href="list-profile.html" class="nav-link">List Profile</a>
+        <a href="safety.html" class="nav-link">Safety</a>
+        <a href="favorites.html" class="nav-link">Favorites</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="btn btn-ghost btn-sm">Log In</a>
+        <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" role="dialog" aria-label="Mobile menu">
+    <div class="mobile-nav-panel">
+      <div class="mobile-nav-header">
+        <span class="logo-text">Connect<span>Naija</span></span>
+        <button class="mobile-nav-close btn-icon" aria-label="Close menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="browse.html">Browse Profiles</a>
+        <a href="list-profile.html">List Your Profile</a>
+        <a href="favorites.html">Favorites</a>
+        <a href="safety.html">Safety Guidelines</a>
+      </nav>
+      <div class="mobile-nav-actions">
+        <a href="login.html" class="btn btn-secondary" style="width:100%">Log In</a>
+        <a href="register.html" class="btn btn-primary" style="width:100%">Sign Up</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="profile-page">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="browse.html">Browse</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Profile</span>
+      </nav>
+      
+      <div id="profile-content">
+        <div style="text-align:center;padding:var(--space-16)">
+          <div class="spinner" style="margin:0 auto"></div>
+        </div>
+      </div>
+
+      <div class="similar-section" id="similar-profiles"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding-top:0">
+        <span>&copy; 2026 ConnectNaija. For adults 18+ only.</span>
+        <a href="safety.html">Safety Guidelines</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/mock-data.js"></script>
+  <script src="js/favorites.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
